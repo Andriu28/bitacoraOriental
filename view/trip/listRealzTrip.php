@@ -1,0 +1,69 @@
+<?php if(!isset($_SESSION['user']))header("location:". DEFAULT_ADDRESS_LOGOUT);?>
+
+<main>
+  <div class="bottom-data">
+    <div>
+      <div class="header">
+        <div class="titleModule">
+          <svg class='bx blue' xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M21.259 11.948A.986.986 0 0 0 22 11V8a.999.999 0 0 0-.996-.999V6H21c0-2.206-1.794-4-4-4H7C4.794 2 3 3.794 3 6v1a1 1 0 0 0-1 1v3c0 .461.317.832.742.948a3.953 3.953 0 0 0-.741 2.298l.004 3.757c.001.733.404 1.369.995 1.716V21a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1h12v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1.274a2.02 2.02 0 0 0 .421-.313c.377-.378.585-.881.584-1.415l-.004-3.759a3.966 3.966 0 0 0-.742-2.291zM5 18h-.995l-.004-3.757c-.001-.459.161-.89.443-1.243h15.111c.283.353.445.783.446 1.242L20.006 18H5zm6.004-10v3H5V8h6.004zM19 11h-5.996V8H19v3zM7 4h10c1.103 0 2 .897 2 2h-4V5H9v1H5c0-1.103.897-2 2-2z"></path>
+            <circle cx="6.5" cy="15.5" r="1.5"></circle>
+            <circle cx="17.5" cy="15.5" r="1.5"></circle>
+          </svg>
+          <h2>Viajes realizados</h2>
+        </div>
+        <div>
+            <a class="enlaces" href="index.php?controller=trip&action=listTripEnabled" title="Ofertas de viajes">
+            <button class="button-Rev2">Ofertas de viaje </button>
+          </a>
+
+      
+        </div>
+      </div>
+      <div class="table-responsive">
+        <table id="tripTable" class="display nowrap" style="width:100%">
+          <thead>
+            <tr>
+              <th>Viaje</th>
+              <th>Destino</th>
+              <th>Parroquia</th>
+              <th>Estado</th>
+              <th>Fecha de salida</th>
+              <th>Opciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <?php if (count($dataToView["data"]) > 0) { foreach ($dataToView["data"] as $data) { ?>
+            <tr>
+              <td>
+                  <?php echo strlen($data['titleTrip']) > 20 ? substr($data['titleTrip'], 0, 20) . '...' : $data['titleTrip']; ?>
+              </td>
+              <td>
+                  <?php echo strlen($data['place']) > 20 ? substr($data['place'], 0, 20) . '...' : $data['place']; ?>
+              </td>
+              <td><?php echo $data['parroquiaName']; ?></td>
+              <td><?php echo $data['estado']; ?></td>
+              <td><?php echo date("d/m/Y", strtotime($data['departureDate']))?></td>
+              <td class="dataTable-icon-center">
+                 <div title="Ver detalles" class="view-details" model='trip' id="<?php echo $data['idTrip']; ?>">
+                  <?php echo DETAILS_ICON ?>                                
+                </div>
+
+                <!-- <a  title="Hacer bitacora" href="#">
+                    <svg class="bx green" xmlns="http://www.w3.org/2000/svg" width="28" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="72" stroke-dashoffset="72" d="M3 14v-9h18v14h-18v-5"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.6s" values="72;0"/></path><path stroke-dasharray="24" stroke-dashoffset="24" stroke-width="1" d="M3 16l4 -3l3 2l6 -5l5 4"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.6s" dur="0.4s" values="24;0"/></path></g><g fill="currentColor" fill-opacity="0"><circle cx="7.5" cy="9.5" r="1.5"><animate fill="freeze" attributeName="fill-opacity" begin="1s" dur="0.2s" values="0;1"/></circle><path d="M3 16l4 -3l3 2l6 -5l5 4V19H3Z"><animate fill="freeze" attributeName="fill-opacity" begin="1.3s" dur="0.5s" values="0;1"/></path></g></svg>
+                </a> -->
+              </td>
+            </tr>
+            <?php }} ?>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</main>
+
+
+  <div id="alert" nameAlert=<?php echo json_encode($controller->response) ?> modelAlert="trip"></div>
+      <script src="asset\js\scripts\alert.js"></script>
+  <script src="asset\js\scripts\dataTableDynamic.js"></script>
+  

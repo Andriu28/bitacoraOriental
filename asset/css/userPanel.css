@@ -1,0 +1,187 @@
+/* General Styles */
+.container-userPanel {
+    max-width: 600px;
+    margin: 120px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    position: relative;
+}
+
+.container-userPanel h2 {
+    text-align: center;
+    color: #333;
+}
+
+.profile-summary {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #333;
+}
+
+.profile-summary label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.profile-summary .button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 24px;
+    margin-top: 24px;
+}
+
+.profile-form .button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px; /* Separación ligera con flex */
+    margin-bottom: 20px;
+}
+
+.profile-summary .button-container a button {
+    padding: 5px 20px;
+    border: none;
+    background-color: #579a59;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.profile-summary .button-container a button:hover {
+    opacity: 0.9;
+}
+
+.profile-form label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #333;
+}
+
+.profile-form .form-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile-form .form-group {
+    width: 48%;
+}
+
+.email-box,
+.profile-form input[type="text"],
+.profile-form input[type="date"],
+.profile-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: #d8e7d7;;
+}
+
+.profile-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f0f0f0; /* Fondo gris claro para el select */
+    background-color: #d8e7d7;;
+}
+
+.profile-form select option {
+    background-color: #bdd3bb;;
+}
+
+.profile-form select option:nth-child(odd) {
+    
+    background-color: #d8e7d7;;
+}
+
+.email-box .email {
+    font-size: 1em;
+    color: #333; /* Color neutro para el email */
+}
+
+.container-userPanel .profile-form .button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Separación ligera con flex */
+    margin-top: 20px;
+}
+
+.container-userPanel .profile-form .button-container button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #529654;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.container-userPanel .profile-form .button-container button[type="reset"] {
+    background-color: #568159;
+}
+
+.container-userPanel .profile-form .button-container button:hover {
+    opacity: 0.9;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .container-userPanel {
+        padding-top: 5%;
+        width: calc(100% - 40px);
+        margin: 20% auto;
+      
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .container-userPanel {
+        padding-top: 20%;
+        width: calc(100% - 40px);
+        margin: 20% auto;
+      
+    }
+    .profile-form .form-row {
+        display: block;
+    }
+
+    .profile-form .form-group {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .profile-summary .button-container,
+    .profile-form .button-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .profile-form .button-container {
+        margin-bottom: 10px;
+    }
+
+    .email-box,
+    .profile-form input[type="text"],
+    .profile-form input[type="date"],
+    .profile-form select {
+        padding: 8px;
+    }
+
+    .profile-summary .button-container a button,
+    .container-userPanel .profile-form .button-container button {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .container-userPanel {
+        margin-top: 20px; /* Ajusta el desplazamiento desde el header para pantallas pequeñas */
+    }
+}
+

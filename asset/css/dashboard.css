@@ -1,0 +1,354 @@
+
+
+.content-dashboard-dashboard{
+    position: relative;
+    width: calc(100% - 230px);
+    left: 120px;
+    transition: all 0.3s ease;
+}
+
+.content-dashboard main{
+    width: 100%;
+    padding: 36px 24px;
+    max-height: calc(100vh - 56px);
+}
+
+.content-dashboard main .header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    grid-gap: 16px;
+    flex-wrap: wrap;
+}
+
+.content-dashboard main .header .left h1{
+    display: inline;
+    font-size: 34px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--dark);
+}
+
+
+.content-dashboard main .header .report{
+    height: 36px;
+    padding: 0 16px;
+    border-radius: 36px;
+    background: var(--primary);
+    color: var(--light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 10px;
+    font-weight: 500;
+}
+
+.content-dashboard main .insights{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-gap: 24px;
+    margin-top: 36px;
+    margin-bottom: 76px;
+}
+
+
+.content-dashboard main .insights li{
+    padding: 19px;
+    background: var(--light);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    grid-gap: 20px;
+    cursor: pointer;
+}
+
+.content-dashboard main .insights li .box-bx{
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    font-size: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+/* Ajustar estilos específicos de background para cada nth-child */
+.content-dashboard main .insights a:nth-child(1) .box-bx {
+    background: var(--light-primary);
+}
+
+.content-dashboard main .insights a:nth-child(2) .box-bx {
+    background: var(--light-warning);
+}
+
+.content-dashboard main .insights a:nth-child(3) .box-bx {
+    background: var(--light-success);
+}
+
+.content-dashboard main .insights a:nth-child(4) .box-bx {
+    background: var(--light-primary);
+}
+
+.content-dashboard main .insights a:nth-child(5) .box-bx {
+    background: var(--light-warning);
+}
+
+.content-dashboard main .insights a:nth-child(6) .box-bx {    
+    background: var(--light-success);
+}
+
+.content-dashboard main .insights li .bx{
+    width: 40px;
+    height: 40px;
+    color: #363949;
+}
+
+
+.content-dashboard main .insights li .info h3{
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--dark);
+}
+
+.content-dashboard main .insights li .info p{
+    color: var(--dark);
+    font-size: 12px;
+}
+
+.content-dashboard main .insights li{
+    transition: transform .2s; /* Transición suave al pasar el cursor */
+}
+    
+.content-dashboard main .insights li:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el cursor */
+    cursor: pointer;
+}
+    
+
+.content-dashboard main .bottom-dat{
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 24px;
+    margin-top: 24px;
+    width: 100%;
+    color: var(--dark);
+}
+
+.content-dashboard main .bottom-dat>div{
+    border-radius: 20px;
+    background: var(--light);
+    padding: 24px;
+    overflow-x: auto;
+}
+
+.content-dashboard main .bottom-dat .header{
+    display: flex;
+    align-items: center;
+    grid-gap: 16px;
+    margin-bottom: 24px;
+}
+
+.content-dashboard main .bottom-dat .header h3{
+    margin-right: auto;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.content-dashboard main .bottom-dat .header .bx{
+    cursor: pointer;
+}
+
+.content-dashboard main .bottom-dat .orders{
+    flex-grow: 1;
+    flex-basis: 500px;
+}
+
+.content-dashboard main .bottom-dat .orders table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.content-dashboard main .bottom-dat .orders table th{
+    padding-bottom: 12px;
+    font-size: 13px;
+    text-align: left;
+    border-bottom: 1px solid var(--grey);
+}
+
+.content-dashboard main .bottom-dat .orders table td{
+    width: 30%;
+    padding: 16px 0;
+}
+
+.content-dashboard main .bottom-dat .orders table tr td:first-child{
+    display: flex;
+    align-items: center;
+    grid-gap: 12px;
+    padding-left: 6px;
+}
+
+.content-dashboard main .bottom-dat .orders table td img{
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.content-dashboard main .bottom-dat .orders table tbody tr{
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.content-dashboard main .bottom-dat .orders table tbody tr:hover{
+    background: var(--grey);
+}
+
+.content-dashboard main .bottom-dat .orders table tr td .status{
+    font-size: 10px;
+    padding: 6px 16px;
+    color: var(--light);
+    border-radius: 20px;
+    font-weight: 700;
+   
+}
+
+.content-dashboard main .bottom-dat .orders table tr td .status.high{
+    background: #529654;
+    
+ 
+}
+
+.content-dashboard main .bottom-dat .orders table tr td .status.medium{
+    background: var(--warning);
+}
+
+.content-dashboard main .bottom-dat .orders table tr td .status.low{
+    background: var(--danger);
+}
+
+.content-dashboard main .bottom-dat .reminders{
+    flex-grow: 1;
+    flex-basis: 300px;
+}
+
+.content-dashboard main .bottom-dat .reminders .task-list{
+    width: 100%;
+}
+
+.content-dashboard main .bottom-dat .reminders .task-list li{
+    width: 100%;
+    margin-bottom: 16px;
+    background: var(--grey);
+    padding: 14px 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.content-dashboard main .bottom-dat .reminders .task-list li .task-title{
+    display: flex;
+    align-items: center;
+}
+
+.content-dashboard main .bottom-dat .reminders .task-list li .task-title p{
+    margin-left: 6px;
+}
+
+.content-dashboard main .bottom-dat .reminders .task-list li .task-title .link-view-model {
+    color: #007bff;                                              
+    cursor: pointer;
+}
+
+.content-dashboard main .bottom-dat .reminders .task-list li .bx{
+  cursor: pointer;  
+}
+
+.content-dashboard main .bottom-dat .reminders .task-list li.completed{
+    border-left: 10px solid var(--success);
+}
+
+.content-dashboard main .bottom-dat .reminders .task-list li.not-completed{
+    border-left: 10px solid var(--warning);
+}
+
+.content-dashboard main .bottom-dat .reminders .task-list li:last-child{
+   margin-bottom: 0;
+}
+
+@media screen and (max-width: 768px) {
+
+    .content-dashboard{
+        width: calc(100% - 60px);
+        left: 200px;
+    }
+
+
+}
+
+@media screen and (max-width: 576px) {
+  
+    .content-dashboard main .bottom-dat .orders table{
+        font-size: 14px;
+    }
+    .content-dashboard main .bottom-dat .orders h3{
+        font-size: 16px;
+    }.content-dashboard main .bottom-dat .orders h2{
+        font-size: 20px;
+    }
+
+    .content-dashboard main .bottom-dat .reminders .task-list li.not-completed,
+    .content-dashboard main .bottom-dat .reminders .task-list li.completed{
+     width:80%;
+     max-width: 170px;
+     font-size: 14px;
+     padding: auto;
+    }
+   
+    .content-dashboard nav form .form-input input{
+        display: none;
+    }
+
+    .content-dashboard nav form .form-input button{
+        width: auto;
+        height: auto;
+        background: transparent;
+        color: var(--dark);
+        border-radius: none;
+    }
+
+    .content-dashboard nav form.show .form-input input{
+        display: block;
+        width: 100%;
+    }
+
+    .content-dashboard nav form.show .form-input button{
+        width: 36px;
+        height: 100%;
+        color: var(--light);
+        background: var(--danger);
+        border-radius: 0 36px 36px 0;
+    }
+   
+    .content-dashboard nav form.show~.notif, .content-dashboard nav form.show~.profile{
+        display: none;
+    }
+
+    .content-dashboard main .insights {
+        grid-template-columns: 1fr;
+    }
+
+    .content-dashboard main .bottom-dat .header{
+        min-width: 340px;
+    }
+
+    .content-dashboard main .bottom-dat .orders table{
+        min-width: 340px;
+    }
+
+    .content-dashboard main .bottom-dat .reminders .task-list{
+        min-width: 340px;
+    }
+
+}

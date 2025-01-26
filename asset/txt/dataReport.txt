@@ -1,0 +1,3 @@
+Reporte generado:
+
+<th>Lugar</th> <th>Parroquia</th> <th>Estado</th><tr> <td>La esquina</td> <td>CM. PUNTA DE PIEDRAS</td> <td>NUEVA ESPARTA</td> </tr><tr> <td>La esquinera</td> <td>CANELONES</td> <td>PORTUGUESA</td> </tr><tr> <td>Toledoa</td> <td>CM. URACOA</td> <td>MONAGAS</td> </tr>

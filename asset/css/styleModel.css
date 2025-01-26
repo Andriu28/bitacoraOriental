@@ -1,0 +1,457 @@
+
+/* COSAS QUE SABRINA MODIFICO EL 18/12/24 */
+.route_logo{
+  color: var(--white-color);
+  font-weight: 600;
+  font-size: 32px;
+
+  border-radius: 50px;
+  border: 3px solid #579a59;
+}
+.highlight {
+  animation: highlight-animation 0.5s infinite;
+}
+
+@keyframes highlight-animation {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.header-title {
+  flex-grow: 1;
+  text-align: center;
+  color: var(--dark) ;
+}
+
+.header-content {
+  display: flex
+;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+.passenger-form {
+  transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+}
+.descriptionPasager {
+  text-align: justify;
+  max-height: 70px;
+  overflow-y: auto;
+  border:none;
+  padding: 0px;
+  margin-bottom: 5px;
+}
+
+
+.minor-info-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.minor-info-container h2 {
+  font-size: 17px; /* Cambia el tamaño de la letra del h2 */
+  margin: 0; /* Reduce el margen inferior para acercarlo a los campos */
+  font-weight: normal; /* Hace que el texto sea más ligero */
+  color: #333; /* Un tono gris oscuro para evitar que sea muy oscuro como el negro */
+}
+
+
+.minor-info {
+  font-size: 15px; /* Cambia el tamaño de la letra del h2 */
+  display: flex;
+  gap: 5px; /* Espacio entre los elementos */
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  flex: 1;
+  position: relative; /* Necesario para ajustar el span */
+}
+
+.field-group label {
+  display: inline-flex;
+  align-items: center;
+}
+
+.field-group label .obligatorio {
+  margin-left: 4px; /* Asegura que el span esté pegado al label */
+}
+
+.input-box {
+  color: var(--dark);
+  width: 100%;
+}
+
+.errorMessage {
+  color: red;
+  font-size: 0.9em;
+  margin-top: -8px;
+  margin-bottom: 10px;
+}
+
+
+/*selec */
+select.custom-select {
+  background-color: #d8e7d8;
+  color: #2e2e2e;
+  border: none;
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 4px;
+  width: 100%;
+  height: 40px;
+}
+select.custom-select {
+  background-color:  #d8e7d8; /* Fondo verde claro */
+  color: #2e2e2e; /* Texto gris oscuro */
+  border: none; /* Borde verde */
+  padding: 5px;
+  font-size: 15px;
+  border-radius: 7px; /* Bordes redondeados */
+  width: 100%; /* Ancho completo */
+  height: 35px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+#user select.custom-select:hover {
+  background-color:  #568159;
+  transform: scale(1.05); /* Aumenta el tamaño en un 5% */
+}
+
+#user select.custom-select{
+  text-align: center;
+  background-color: #529654;
+  color:#ffff;
+  border: #5a995d;; /* Borde verde */
+  height: 30px;
+  border-radius: 5px;
+}
+
+/* Estilo para las opciones del select */
+select.custom-select option {
+  background-color: #A9C4A0; /* Verde más oscuro para las opciones */
+  color: white; /* Texto blanco */
+}
+
+/* Alternar colores para las opciones */
+select.custom-select option:nth-child(odd) {
+  background-color: #8DAF8D; /* Verde aún más oscuro para las opciones impares */
+}
+
+#lab{
+ margin-bottom: 5px;
+}
+ .boton-sig-ant{ 
+  display: flex; justify-content: space-between; 
+}
+
+/* Estilo para botón anterior */
+.button-prev-passenger { 
+  margin-top: 8px;
+  margin-bottom: 0px;
+  border: none;
+  background-color: transparent;
+  margin-left: 0; 
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.button-prev-passenger:hover { 
+  transform: scale(1.1);
+
+}
+
+/* Estilo para botón siguiente */
+.button-next-passenger { 
+  border: none;
+  background-color: transparent;
+  margin-right: 0; 
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin-top: 8px;
+  margin-bottom: 0px;
+
+}
+
+.button-next-passenger:hover { 
+  transform: scale(1.1);
+
+  background-color: transparent;
+}
+
+/* Estilo para botones eliminar y limpiar */
+.button-delete-passenger,.button-clear-passenger, .button-action {
+  border: none;
+  background-color: transparent;
+  align-items: center;
+  margin: auto; 
+  transition: transform 0.2s, box-shadow 0.2s;
+  padding-top: 15px;
+
+}
+
+.button-delete-passenger:hover, .button-clear-passenger:hover, .button-action:hover { 
+  transform: scale(1.1);
+  background-color: transparent;
+}
+
+/* botones para el estilo de los botones eliminar y limpiar del formulario dinámico */
+.button-delete-passenger,.button-clear-passenger, .button-action {
+  border: none;
+  background-color: transparent;
+  align-items: center;
+  margin: auto;
+}
+
+/* Estilo para el botón reset */
+.reset-button, .reset-button_edit { 
+  width: 40px;
+  height: 40px;
+  display: flex; 
+  align-items: center; 
+  border: none;
+  background-color: transparent;
+  margin-top: 10px;
+  padding: auto;
+  border-radius: 5px; 
+  transition: background-color 0.3s, box-shadow 0.2s;
+
+
+}
+
+.reset-button:hover, .reset-button_edit:hover {
+  transform: scale(1.1);
+  background-color: transparent;
+
+}
+
+.reset-button svg , .reset-button_edit svg { 
+  margin: auto;
+}
+
+
+.radio-input {
+  margin-top: 5spx;
+  width: 13px; /* Tamaño más grande del círculo */
+  height: 13px; /* Tamaño más grande del círculo */
+  border-radius: 50%; /* Hacerlo circular */
+  border: 2px solid #ccc; /* Borde del círculo */
+  background-color: white; /* Fondo blanco */
+  cursor: pointer; /* Cambiar el cursor al pasar el mouse */
+  appearance: none; /* Eliminar el estilo predeterminado del navegador */
+  position: relative;
+
+}
+
+.radio-input:checked {
+  background-color: #66bb6a; /* Fondo verde cuando se selecciona */
+  border: 2px solid #66bb6a; /* Borde verde cuando se selecciona */
+}
+
+.radio-input:checked::before {
+  content: '✔'; /* Mostrar la palomita */
+  color: white; /* Color de la palomita */
+  font-size: 16px; /* Tamaño de la palomita */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centrar la palomita */
+}
+
+
+.radio-input:hover {
+  background-color: #66bb6a; /* Cambia el color de fondo cuando está seleccionado */
+}
+
+/* fin COSAS QUE SABRINA MODIFICO EL 18/12/24 */
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.model-box-packages{/* Caja para paquetes, es por que es mas grande y se divide en dos secciones*/
+  font-family: "Roboto", sans-serif;
+  color: #2e2e2e;
+  z-index: 1;
+  background: #FFFFFF;
+  width: 600px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  max-width: 600px;
+  margin: 100px auto 100px;
+  padding: 45px;
+}
+.model-box-default{/* Cajas por defecto para los modelos, se ser necesario se crear mas cajas espesificas*/
+  font-family: "Roboto", sans-serif;
+  color: #2e2e2e;
+  z-index: 1;
+  background: #FFFFFF;
+  width: 120%;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  max-width: 600px;
+  padding: 1em 1em 0em 1em;
+  border-radius: 20px;
+}
+
+.form-container-model {/*sirve para crear una caja para dividirla */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 1em;
+}
+
+.form-container-model .form-section-model {/*divide la caja junto con la clase de arriba */
+  flex: 1;
+  padding: 10px;
+}
+
+.form-container-model .section-radiobox{/*particion de la seccions de radio de packages*/
+  
+    flex: 1;
+    padding: 10px;
+    /* margin: 60px 0px 0px 50px; */
+  
+}
+/*ejemplo de caja para los formularios*/
+.model-form {
+  font-family: "Roboto", sans-serif;
+  color: #2e2e2e;
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 600px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+/*Inicio y registro*/
+
+
+.form-container {/*contener para el register, para realizar particiones*/
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+}
+
+.form-container .form-section-register {/*secciones del register*/
+    flex: 1;
+    padding: 10px;
+}
+
+
+  .login-register-form { /*estilo de login y register*/
+    font-family: "Roboto", sans-serif;
+    color: #2e2e2e;
+    position: relative;
+    z-index: 1;
+    background: #FFFFFF;
+    max-width: 600px;
+    padding: 1em;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    border-radius: 10px;
+  }
+
+.input-box { /*estilos del inputs de los formulario*/
+    width: 100%;
+    color: var(--dark);
+    background: #d8e7d7 ;
+    border-style:unset;
+    padding: 9px;
+    box-sizing: border-box;
+    font-size: 15px;
+    border-radius: 6px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    height: 35px;
+  }
+
+
+.button-login-register { /*boton para los los formularios*/
+    outline: 0;
+    width: 100%;
+    padding: 9px;
+    font-size: 14px;
+    background:#529654;
+    color: #fff;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+    border-style: none;
+    border-radius: 10px;
+   
+  }
+.button-login-register:hover {
+  
+  background-color:  #568159;
+  color:#FFFF;
+
+
+  }
+
+.button-login-register:focus{
+  color:#FFFF;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.621);
+  
+  }
+  
+  
+ 
+  .message{ /*mensaje de los formualrios */
+    margin: 0px 0px 10px;
+    color: #4f4f4f;
+    font-size: 14px;
+  }
+
+.button-Rev { /*estilo de los botones regulares del sistema*/
+  display: flex;
+  padding: 9px;
+  background-color: #959695;
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 14px;
+  justify-content: center;
+}
+
+.button-Rev:hover {
+  
+  background-color: #808180;
+  color: #fff;
+}
+.button-Rev:focus{
+ 
+  background-color: #6f706f;
+  color: #fff;
+}
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.button-Rev2  { /*estilo de boton importantes del sistema */
+  /* width: 100%;  */
+  padding: 5px 10px 5px 10px;
+  background-color: #529654;
+  color: #fff;
+  border-radius: 5px;
+  border: 0px;
+  cursor: pointer;
+  margin-left: 2px;
+ 
+}
+.button-Rev2:hover {
+  background-color:  #568159;
+  color: #fff;
+  transform: scale(1.1);
+
+
+}
+.button-Rev2:focus{
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.621);
+}
+
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*/////////////////////////////////////////////////////////////////////////////////////////////////*/

@@ -1,0 +1,317 @@
+
+
+.action .profile{
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.action .profile img{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.action .profile:hover {
+    transform: scale(1.09);
+}
+
+.action .menuProfile{
+    position: absolute;
+    top: 92px;
+    right: 27px;
+    padding: 10px 12px;
+    background: #fff;
+    width: 220px;
+    box-sizing: 0 5px 25px rgb(0,0,0,0.1);
+    border-radius: 7px;
+    transition: 0.3s;
+    visibility: hidden;
+    opacity: 0;
+    box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.509);
+}
+
+.action .menuProfile.active{
+    top: 56px;
+    visibility: visible;
+    opacity: 1;
+}
+
+.action .menuProfile::before{
+    content: '';
+    position: absolute;
+    top: -5px;
+    right: 13px;
+    width: 20px;
+    height: 20px;
+    background: rgb(255, 255, 255);
+    transform: rotate(45deg);
+}
+
+.action .menuProfile h3{
+   /*width: 100%;
+   text-align: center;*/
+   font-size: 16px;
+   padding: 20px 0;
+   font-weight: 500;
+   color: #555;
+   line-height: 1.2em; 
+}
+
+.action .menuProfile h3 span{
+    font-size: 14px;
+    color: #cececece;
+    font-weight: 400;
+}
+
+
+.action .menuProfile ul li {
+    list-style: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.088);
+    display: flex;
+    align-items: center;
+    color: #555;
+    gap: 10px;
+    transition: all 0.3s ease-out;
+    padding: 4px 7px;
+    margin: 3px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.82rem;
+  }
+
+.action .menuProfile ul li svg{
+    max-width: 26px;
+    margin-right: 2px;
+    opacity: 0.5;
+    transition: 0.5s;
+}
+
+.action .menuProfile ul li:hover svg{
+    opacity: 1 ;
+    color: rgb(255, 255, 255); 
+}
+
+.action .menuProfile ul li a{
+    display: inline-block;
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    transition: 0.5s;
+}
+
+.action .menuProfile ul li:hover a{
+    color: rgb(255, 255, 255); 
+}
+
+.action .menuProfile ul li:hover {
+    background-color: #579a59;
+    color: #ffffff;
+    transform: translate(10px, -1px);
+    transform: scale(1.07);
+}
+
+.action .menuProfile ul li:active {
+    transform: scale(1);
+}
+
+
+.user-info{
+    display: flex;
+    align-items: center; 
+}
+
+.user-info h3{
+    font-weight: 500;
+}
+
+.user-info img{
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    margin-right: 8px;
+    object-fit: cover;
+}
+
+.menuProfile hr{
+    border: 0;
+    height: 2px;
+    width: 100%;
+    background: rgb(171, 171, 171);
+  
+}
+
+.action .menuProfile ul li.logoutMenu:hover {
+    background-color: var(--danger);
+}
+
+.action .menuProfile ul li.logoutMenu:hover svg {
+    color: #ffffff;
+}
+
+.action .menuProfile ul li.logoutMenu:hover a {
+    color: #ffffff;
+}
+
+.action .menuProfile  a .logoutMenu {
+    color: var(--danger);
+}
+
+.action .menuProfile ul li.logoutMenu svg {
+    opacity: 1;
+    color: var(--danger);
+}
+
+
+
+/* modo obscuro */
+body.dark .action .profile{
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+
+body.dark .action .profile:hover {
+    transform: scale(1.09);
+}
+
+
+body.dark .action .menuProfile{
+    position: absolute;
+    top: 92px;
+    right: 27px;
+    padding: 10px 12px;
+    background: #333; /* Fondo oscuro */
+    width: 220px;
+    box-sizing: 0 5px 25px rgb(0,0,0,0.1);
+    border-radius: 7px;
+    transition: 0.3s;
+    visibility: hidden;
+    opacity: 0;
+    box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.509);
+}
+
+body.dark .action .menuProfile.active{
+    top: 56px;
+    visibility: visible;
+    opacity: 1;
+}
+
+body.dark .action .menuProfile::before{
+    content: '';
+    position: absolute;
+    top: -5px;
+    right: 13px;
+    width: 20px;
+    height: 20px;
+    background: #333; /* Fondo oscuro */
+    transform: rotate(45deg);
+}
+
+body.dark .action .menuProfile h3{
+   font-size: 16px;
+   padding: 20px 0;
+   font-weight: 500;
+   color: #ddd; /* Texto claro */
+   line-height: 1.2em; 
+}
+
+body.dark .action .menuProfile h3 span{
+    font-size: 14px;
+    color: #bbb; /* Texto claro */
+    font-weight: 400;
+}
+
+body.dark .action .menuProfile ul li {
+    list-style: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Línea clara */
+    display: flex;
+    align-items: center;
+    color: #ddd; /* Texto claro */
+    gap: 10px;
+    transition: all 0.3s ease-out;
+    padding: 4px 7px;
+    margin: 3px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.82rem;
+  }
+
+body.dark .action .menuProfile ul li svg{
+    max-width: 26px;
+    margin-right: 2px;
+    opacity: 0.5;
+    transition: 0.5s;
+}
+
+body.dark .action .menuProfile ul li:hover svg{
+    opacity: 1 ;
+    color: #fff; 
+}
+
+body.dark .action .menuProfile ul li a{
+    display: inline-block;
+    text-decoration: none;
+    color: #ddd; /* Texto claro */
+    font-weight: 500;
+    transition: 0.5s;
+}
+
+body.dark .action .menuProfile ul li:hover a{
+    color: #fff; 
+}
+
+body.dark .action .menuProfile ul li:hover {
+    background-color: #5e5e5e; /* Fondo de hover oscuro */
+    color: #ffffff;
+    transform: translate(10px, -1px);
+    transform: scale(1.07);
+}
+
+body.dark .action .menuProfile ul li:active {
+    transform: scale(1);
+}
+
+body.dark .user-info{
+    display: flex;
+    align-items: center; 
+}
+
+body.dark .user-info h3{
+    font-weight: 500;
+    color: #ddd; /* Texto claro */
+}
+
+
+
+body.dark .menuProfile hr{
+    border: 0;
+    height: 2px;
+    width: 100%;
+    background: rgb(171, 171, 171);
+}
+
+body.dark .action .menuProfile ul li.logoutMenu:hover {
+    background-color: var(--danger);
+}
+
+body.dark .action .menuProfile ul li.logoutMenu:hover svg {
+    color: #ffffff;
+}
+
+body.dark .action .menuProfile ul li.logoutMenu:hover a {
+    color: #ffffff;
+}
+
+body.dark .action .menuProfile a .logoutMenu {
+    color: var(--danger);
+}
+
+body.dark .action .menuProfile ul li.logoutMenu svg {
+    opacity: 1;
+    color: var(--danger);
+}

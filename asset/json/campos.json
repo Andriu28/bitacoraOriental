@@ -1,0 +1,110 @@
+{
+    "faq": [
+        {
+            "Preguntas": "query",
+            "Respuestas": "respond"
+        }
+    ],
+    "packages": [
+        {
+            "Título": "title",
+            "Descripción": "description",
+            "Transporte": "transport",
+            "Comida": "food",
+            "Alojamiento": "lodging",
+            "Precio": "price",
+            "Estatus": "status"
+        }
+    ],
+    "person": [
+        {
+            "Cédula": "p.ci",
+            "Nombre": "p.name",
+            "Apellido": "p.lastName",
+            "Fecha de Nacimiento": "p.birthDate",
+            "Teléfono": "p.phone",
+            "Parroquia": "a.parroquia",
+            "Dirección": "p.address"
+        }
+    ],
+    "pubspecials": [
+        {
+            "Título": "title",
+            "Descripción": "description",
+            "Estatus": "status"
+        }
+    ],
+    "reservation": [
+        {
+            "Usuario": "s.email",
+            "Viaje": "v.title",
+            "Cupos Reservados": "r.numberSlots",
+            "Fecha de Reserva": "r.reservationDate",
+            "Precio Total Bs.S": "r.amount",
+            "Confirmación": "r.confirmation"
+        }
+    ],
+    "route": [
+        {
+            "Lugar": "r.place",
+            "Ubicación": "r.location",
+            "Parroquia": "p.parroquia",
+            "Municipio": "m.municipio",
+            "Estado": "e.estado",
+            "Descripción": "r.description",
+            "Estatus": "r.status"
+        }
+    ],
+    "traveloffer": [
+        {
+            "Viaje": "v.title AS tripTitle",
+            "Tipo de Paquete": "p.title AS packageTitle",
+            "Precio Bs.S": "t.amount",
+            "Estatus": "t.status"
+        }
+    ],
+    "trip": [
+        {
+            "Título": "v.title",
+            "Lugar": "r.place",
+            "Parroquia": "p.parroquia",
+            "Municipio": "m.municipio",
+            "Estado": "e.estado",
+            "Ubicación Salida": "v.departureLocation",
+            "Fecha Salida": "v.departureDate",
+            "Hora Salida": "v.departureTime",
+            "Fecha Regreso": "v.returnDate",
+            "Hora Regreso": "v.returnTime",
+            "Número Plazas": "v.numberSlots",
+            "Vacantes": "v.vacant",
+            "Precio Bs.S": "v.price"
+        }
+    ],
+    "user": [
+        {
+            "Nombre": "p.name",
+            "Correo Electrónico": "s.email",
+            "Privilegio": "s.privilege",
+            "Estatus": "s.status",
+            "Verificado": "s.verified"
+        }
+    ],
+    "weblog": [
+        {
+            "Título de Viaje": "v.title",
+            "Descripción": "w.description",
+            "Número Viajeros": "w.numberTravel",
+            "Estatus": "w.status"
+        }
+    ],
+    "history": [
+        {
+            "Usuario": "s.email",
+            "Privilegio": "s.privilege",
+            "Módulo": "h.module",
+            "Acción": "h.action",
+            "Fecha": "h.registrationDate",
+            "Hora": "h.registrationTime"
+        }
+    ]
+}

@@ -1,0 +1,137 @@
+.card-wrapper {
+  max-width: 1100px;
+  margin: 0 30px 15px;
+  padding: 28px 15px;
+  overflow: hidden;
+}
+
+.card-list .card-item {
+  list-style: none;
+}
+
+.card-list .card-item .card-link {
+  display: block;
+  background-image: linear-gradient(125deg, var(--light-gray-color) 80%, #3ba41168 100%); 
+  max-height: 85%;
+  padding: 15px;
+  color: rgba(0, 0, 0);
+  user-select: none;
+  border-radius: 12px;
+  text-decoration: none;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.55);
+  transition: transform 0.3s ease, border-color 0.7s ease; /* Added transform transition */
+}
+
+/* Hover effect to enlarge the card */
+.card-list .card-item .card-link:hover {
+  transform: scale(1.06); /* Scale up on hover */
+}
+
+.card-list .card-link .card-image{
+  width: 100%;
+  border-radius: 10px;
+  aspect-ratio: 50 / 30;
+  object-fit: cover;
+  transition: transform 0.4s ease; /* Added for smooth scaling */
+}
+
+
+
+.card-list .card-link .card__span {
+    color: #fff;
+    font-size: 1.3rem;
+    border-radius: 5px;
+    font-weight: 600;
+    background: rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+    position: absolute;
+    top: 28px; /* Adjusted to fit design */
+    left: 32px; /* Adjusted to fit design */
+    padding: 3px 7px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+    transition: transform .1s ease-in;
+    user-select: none;
+    max-width: 80%;
+}
+
+.card__span:hover {
+    transform: translateX(5px);
+}
+
+/* Card Content Styles */
+.card-int {
+    padding-top: 10px; /* Adjusted for spacing */
+}
+
+/* Title Styles */
+/* Title Styles */
+.card-int__title {
+  font-weight: bold; /* Changed to bold for better visibility */
+  font-size: 0.9rem;
+  margin-bottom: 0px; /* Spacing below title */
+  height: calc(3.4em); /* Set a maximum height for title area (adjust as needed) */
+  overflow-y: auto; /* Enable vertical scrolling if needed */
+}
+
+/* Excerpt Styles */
+.excerpt {
+    font-size: 14px; 
+    height: 100px;
+    overflow-y: auto;
+    margin-top: 10px;
+    text-align: justify; 
+    margin-bottom: 10px;
+}
+
+/* Swiper Pagination Styles */
+.card-wrapper .swiper-pagination-bullet {
+    height: 13px;
+    width: 13px;
+    opacity: .5;
+    background-color: #579a59;
+}
+
+.card-wrapper .swiper-pagination-bullet-active {
+   opacity :1 ;
+}
+
+/* Navigation Button Styles (if needed) */
+
+
+/* Responsive media query code for small screens */
+@media (max-width: 768px) {
+  .card-wrapper {
+    height: 500px;
+    margin: 0px;
+    padding: 15px 12px;
+  }
+  .card-wrapper .card-image{
+    height: 150px;
+  }
+  
+
+}
+@media screen and (min-width: 400px) and (max-width: 700px) {
+  .card-list .card-item .card-link {
+    height: 450px; /* Puedes ajustar esto según tus necesidades */
+    padding: 20px;
+  }
+  .card-list .card-link .card-image {
+    width: 100%;
+    height: 200px;
+
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .card-list .card-item .card-link {
+    height: 450px; /* Puedes ajustar esto según tus necesidades */
+    padding: 20px;
+  }
+  .card-list .card-link .card-image{
+    width: 100%;
+    height: 200px; 
+  }
+}
+
+
